@@ -1,0 +1,15 @@
+extends ../../../../templates/mastersecretary
+
+block prepend main
+	.content
+		.container-fluid
+			.row
+				.col-md-12
+					.card.strpied-tabled-with-hover
+						.card-header
+							h2.card-title
+								i.nc-icon.nc-notes
+								|  Guest information
+							each events in tbl_event                          
+								p=events.int_guestid                                
+								p=events.varchar_lastname

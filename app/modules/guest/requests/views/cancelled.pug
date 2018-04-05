@@ -1,0 +1,42 @@
+extends ../../../../templates/guesthome
+
+block content 
+
+    <link rel="stylesheet" href="/styles/back.css">
+    
+    <div class="container">
+    <div class="jumbotron">
+
+    //- <form class="form-horizontal" method='post' action='requests'>
+    //- input(type="text" hidden='' name="int_guestid" value=`${user.int_guestid}`)
+    <div class="btn-group">
+    <a href="/guest/requests"><button>Back</button></a>
+
+    </div>
+    <legend> CANCELLED RESERVATIONS </legend>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+            <th>RESERVATION ID</th>
+            <th>DESIRED DATE</th>
+            //- <th>DATE RESERVED</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            each reservations in tbl_reservation
+                <tr>
+                //- <th></th>
+                td
+                    a(href=`/guest/requests/annointment/${reservations.int_reservationid}`)= reservations.int_reservationid
+                td=reservations.date_schedule
+                        //- <td><input type="submit" value="Submit Requirements"></a></td>
+                td
+                    a(href=`/guest/submittingforms/annointmentrequirements`): span.fa.fa-edit
+                </tr>
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+   

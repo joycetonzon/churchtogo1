@@ -1,0 +1,127 @@
+extends ../../../../templates/mastersecretary
+block content
+	<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-12">
+			<div class="card strpied-tabled-with-hover">
+			<div class="card-header">
+				<h4 class="card-title"><i class="nc-icon nc-grid-45"></i> Appoint Coordinator/Priest</h4>
+			</div>
+			<div class="card-body table-full-width table-responsive">
+				<table class="table table-hover table-striped">
+				<thead>
+					<th>Guest Name</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Event Type</th>
+					<th>Status</th>
+					<th>Action</th>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Joshua Rae Macaya</td>
+					<td>Jan 1, 2018</td>
+					<td>10:00am - 12:00pm</td>
+					<td>Baptism		</td>
+					<td>Pending</td>
+					<td><a href="#" data-toggle="modal" data-target="#appointment"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div class="card-body table-full-width table-responsive">
+				<table class="table table-hover table-striped">
+				<thead>
+					<th>Guest Name</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Event Type</th>
+					<th>Status</th>
+					<th>Action</th>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Joshua Rae Macaya</td>
+					<td>Jan 1, 2018</td>
+					<td>10:00am - 12:00pm</td>
+					<td>Baptism		</td>
+					<td>Pending</td>
+					<td><a href="#" data-toggle="modal" data-target="#appointment"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="modal fade" id="appointment">
+		<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title font-weight-bold d-inline" id="loginModalLabel">Available Coordinators and Priest</h5>
+			<button class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+			<div class="row">
+				<div class="col-3">
+				<label class="text-muted">COORDINATORS</label>
+				</div>
+				<div class="col-9">
+				<table class="table table-hover table-striped">
+					<thead>
+					<th>Full name</th>
+					<th>Ministry</th>
+					<th> </th>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Jonalyn Fe Ebrada</td>
+						<td>BEC</td>
+						<td>
+						<div class="form-check pl-0 mr-4 text-right">
+							<label class="form-check-label p-0">&nbsp;
+							<input class="form-check-input" type="checkbox" value=""/><span class="form-check-sign"></span>
+							</label>
+						</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+				<label class="text-muted">PRIESTS</label>
+				</div>
+				<div class="col-9">
+				<table class="table table-hover table-striped">
+					<thead>
+					<th>Full name</th>
+					<th> </th>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Wee Woo Woo</td>
+						<td>
+						<div class="form-check pl-0 mr-4 text-right">
+							<label class="form-check-label p-0">&nbsp;
+							<input class="form-check-input" type="checkbox" value=""/><span class="form-check-sign"></span>
+							</label>
+						</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="container d-flex justify-content-end m-3">
+				<button class="m-1 btn btn-primary btn-fill">Update</button>
+				<button class="m-1 btn btn-danger btn-fill">Cancel</button>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>

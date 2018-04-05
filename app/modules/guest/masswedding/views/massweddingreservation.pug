@@ -1,0 +1,267 @@
+extends ../../../../templates/mainwithsession
+
+block content
+    
+    <link rel="stylesheet" href="/styles/weddingform.css">
+    <div class="container">
+    <div class="jumbotron">
+    <form class="form-horizontal" method='post' action='masswedding'>
+        <fieldset>
+            input(type="hidden" name="guestid" value=`${user.int_guestid}`)
+            <legend> BRIDE's FORM </legend>
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="bridelastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridefirstname" class="form-control" placeholder="First Name"minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridemiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45" >
+                </div>
+                </div>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="bridebirthday" class="form-control" placeholder="Enter birthday" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Address:</label>
+            <div class="col-lg-10">
+                <input type="string" name="brideaddress" class="form-control" placeholder="Enter address" minlength="2" maxlength="70" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputOccupation" class="col-lg-2 control-label">Occupation:</label>
+            <div class="col-lg-10">
+                <input type="string" name="brideoccupation" class="form-control" placeholder="Enter occupation" minlength="2" maxlength="60" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Civil Status:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="bridestatus">
+                    <option>Single/Never Married</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                    <option>Married</option>
+                </select>
+            </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Religion:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="bridereligion">
+                        <option>Catholic</option>
+                        <option>Non-Catholic</option>
+                        <option>Non-Christian</option>
+                        <option>No-Religion</option>
+                    </select>
+                </div>
+                </div>
+
+            <p>Bride's Father
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="bridefatherlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridefatherfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridefathermiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45" >
+                </div>
+            </div>
+            <p>Bride's Mother
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="bridemotherlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridemotherfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="bridemothermiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you 5 months or above pregnant?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="pregnant">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a baptized catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="bridebaptized">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a confirmed catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="brideconfirmed">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+
+
+
+
+
+            <hr>
+            <legend> GROOM's FORM </legend>
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="groomlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groomfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groommiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45" >
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="groombirthday" class="form-control" placeholder="Enter birthday" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Address:</label>
+            <div class="col-lg-10">
+                <input type="string" name="groomaddress" class="form-control" placeholder="Enter address" minlength="2" maxlength="70" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputOccupation" class="col-lg-2 control-label">Occupation:</label>
+            <div class="col-lg-10">
+                <input type="string" name="groomoccupation" class="form-control" placeholder="Enter occupation" minlength="2" maxlength="60" required>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Civil Status:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name= "groomstatus">
+                    <option>Single/Never Married</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                    <option>Married</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Religion:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groomreligion">
+                        <option>Catholic</option>
+                        <option>Non-Catholic</option>
+                        <option>Non-Christian</option>
+                        <option>No-Religion</option>
+                    </select>
+                </div>
+                </div>
+
+            <p>Groom's Father
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="groomfatherlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groomfatherfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groomfathermiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45">
+                </div>
+            </div>
+            <p>Groom's Mother
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="groommotherlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groommotherfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                </div>
+                <div class="col-lg-3">
+                        <input type="text" name="groommothermiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a baptized catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groombaptized">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a confirmed catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groomconfirmed">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            <p>For the couple
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Church Married?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="churchmarried">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Civil Married?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="civilmarried">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            //- <ul class="pager">
+            //-     <li><a href="/guest/masswedding/listofsponsors">Next</a></li>
+            //- </ul>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Desired date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="weddingdate" class="form-control" placeholder="Enter desired">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    
+    </div>

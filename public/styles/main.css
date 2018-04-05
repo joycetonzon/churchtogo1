@@ -1,0 +1,173 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+header.container
+{
+    height: 80%;
+    width: 100vw;
+
+    position: relative;
+    overflow: hidden;
+
+    margin-left: -15px;
+}
+
+footer.container
+{
+    height: 80%;
+    width: 100vw;
+    background-color: rgb(240, 239, 239);
+
+    overflow-x: hidden;
+}
+p
+{
+    font-family: "KG Broken Vessels Sketch Regular";
+    text-align: center;
+    color: #212A30;
+    font-size: 20px;
+}
+f
+{
+    font-family: "KG Broken Vessels Sketch Regular";
+    color: #212A30;
+    font-size: 30px;
+}
+/* .footer
+{
+    text-align: center;
+    width: 100vw;
+    height: 200px;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 30px;
+    margin-bottom: 10px;
+
+    overflow-x: hidden;
+} */
+.cust
+{
+    padding: 2px 2px 2px 2px;
+    position: relative;
+    display: inline-table;
+    color: #212A30;
+}
+hr {
+    border: none;
+    height: 2px;
+    color: #333; 
+    background-color: #333; 
+}
+/* *
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{ 
+    background: url('/assets/pics/FirstBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container
+{
+    width: 1300px;
+    height: 200px;
+    border: none;
+    text-align: center;
+}
+.container .zoomImage
+{
+    float: left;
+    shape-image-threshold: 0.7;
+    margin-left: 100px;
+    width: 25%;
+    margin-top: 60px;
+    height: 410px;
+    overflow: hidden;
+    border: none;   
+
+}
+.container .left
+{
+    float: left;
+    margin-left: 380px;
+    width: 250px;
+    height: 250px;
+    border: none;
+}
+.left img
+{
+    shape-image-threshold: 0.7;
+    margin-left: -750px;
+    margin-top: 50px;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+.ZoomImage:hover img
+{
+    border: none;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+} 
+.container .zoom
+{
+    float: right;
+    width: 40%;
+    height: 760px;
+    margin-top: -100px;
+    overflow: hidden;
+    border: none;  
+}
+.container .right
+{
+    float: right;
+    width: 50%;
+    height: -74px;
+    border: none;
+}
+.right img
+{
+    shape-image-threshold: 0.7;
+    margin-left: -300px;
+    margin-top: 500px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+.zoom:hover img
+{
+    border: none;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+} */

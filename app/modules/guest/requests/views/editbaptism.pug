@@ -1,0 +1,134 @@
+extends ../../../../templates/guesthome
+
+block content
+
+    <link rel="stylesheet" href="/styles/baptismalwithsession.css">
+    <div class="container">
+    <div class="jumbotron">
+    form( class="form-horizontal" method='post' action=`/guest/requests/baptismal/${reservation.int_reservationid}/edit`)
+        <fieldset>
+            input(type="hidden" name="guestid" value=`${user.int_guestid}`)
+            <legend> BAPTISM APPLICATION FORM </legend>
+            <div class="form-group" >
+            <label for="select" class="col-lg-2 control-label">Relation:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="baptismalrelationship">
+                    <option value="Parent">Parent</option>
+                    
+                    <option value="Sibling">Sibling</option>
+                    
+                    <option value="Aunt/Uncle">Aunt/Uncle</option>
+                    <option value="Cousin">Cousin</option>
+                    
+                    
+                    <option value="Friend">Friend</option>
+                    <option value="Grand Parent">Grand Parent</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Child's Name:</label>
+            <div class="col-lg-3">
+                input(type="text" name="childlastname" class="form-control" value= `${reservation.varchar_lastname}`)
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="childfirstname" class="form-control" value= `${reservation.varchar_firstname}`)
+            </div>
+            <div class="col-lg-3">
+                input(type="text" name="childmiddlename" class="form-control" value= `${reservation.varchar_middlename}` )
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                input( type="date" name="childbirthday" class="form-control" )
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Child's Birthplace</label>
+            <div class="col-lg-10">
+                input( type="string" name="childbirthplace" class="form-control" value= `${reservation.varchar_childsbirthplace}`)
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Mother's Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="motherlastname" class="form-control" value= `${reservation.varchar_motherlastname}` )
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="motherfirstname" class="form-control" value= `${reservation.varchar_motherfirstname}` )
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="mothermiddlename" class="form-control" value= `${reservation.varchar_mothermiddlename}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Birthplace:</label>
+            <div class="col-lg-10">
+                input( type="string" name="motherbirthplace" class="form-control" value= `${reservation.varchar_motherbirthplace}`)
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Father's Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="fatherlastname" class="form-control" value= `${reservation.varchar_fatherlastname}`)
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="fatherfirstname" class="form-control" value= `${reservation.varchar_fatherfirstname}` )
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="fathermiddlename" class="form-control" value= `${reservation.varchar_fathermiddlename}` )
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Birthplace:</label>
+            <div class="col-lg-10">
+                input( type="string" name="fatherbirthplace" class="form-control" value= `${reservation.varchar_fatherbirthplace}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Place of Marriage:</label>
+            <div class="col-lg-10">
+                input( type="string" name="placeofmarriage" class="form-control" value= `${reservation.varchar_parentmarriageaddress}`)
+                <label> (Please indicate the church/municipality) </label> 
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Family's Address:</label>
+            <div class="col-lg-10">
+                input( type="string" name="familyaddress" class="form-control" value= `${reservation.varchar_address}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputContact" class="col-lg-2 control-label">Contact #:</label>
+            <div class="col-lg-10">
+                input( type="string" name="familycontact" class="form-control" value= `${reservation.varchar_baptismalcontact}`)
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Desired date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="baptismaldate" class="form-control" placeholder="Enter desired"  required>
+            </div>
+            </div>
+
+
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    
+    </div>

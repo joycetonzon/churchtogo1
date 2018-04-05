@@ -1,0 +1,46 @@
+extends ../../../../templates/secret
+
+block content
+    <link rel="stylesheet" href="/styles/calendarnew.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <div class="container">
+    <div class="jumbotron">
+
+
+    <div class="btn-group" style="width:100%">
+    <a href="/admin/calendar/baptismalevents"><button>Baptismal</button></a>
+    <a href="/admin/calendar/privateweddingevents"><button>Private Wedding</button></a>
+    <a href="/admin/calendar/massweddingevents"><button>Mass Wedding</button></a>
+    <a href="/admin/calendar/annointmentevents"><button>Annointment</button></a>
+    <a href="/admin/calendar/funeralmassevents"><button>Funeral Mass</button></a>
+    </div>
+    each event in tbl_event  
+        <div class= "calendar">  
+            <ul>
+                label="Schedule"
+                li=event.date_schedule
+                label="Event"
+                li=event.char_event
+                label="Guest Username"
+                li=event.varchar_username
+                label="Priest Assigned"
+                li=event.varchar_priestlastname
+
+                
+            </ul>
+            
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <p> FOLLOW US ON SOCIAL MEDIA </p>
+        <i class="fa fa-facebook fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-twitter fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-instagram fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-youtube fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-pinterest fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-linkedin fa-2x cust" aria-hidden="true"></i>
+        <hr size="20">
+        <f2> https://churchtogo.io </f2>
+    </div>

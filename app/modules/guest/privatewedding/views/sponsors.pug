@@ -1,0 +1,22 @@
+extends ../../../../templates/guesthome
+
+block content
+  <link rel="stylesheet" href="/styles/baptismalwithsession.css">
+  <div class="container">
+    <div class="jumbotron">
+    form(class="form-horizontal" method="get" action=`/guest/privatewedding/sponsors/${resid}/listofsponsors` )
+        <fieldset>
+            //- input(type="hidden" name="reservationid" value=`${user.int_guestid}`)
+            <legend>PRIVATE WEDDING FORM </legend>
+            <div class="form-group">
+            <label for="inputContact" class="col-lg-2 control-label">Number os sponsors:</label>
+            <div class="col-lg-10">
+                <input type="number" name="numberofsponsors" class="form-control" placeholder="Enter number of sponsors">
+            </div>
+            </div>
+
+        <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Submit</button></div>
+  </form>
+  </div>
+  </div>

@@ -1,0 +1,126 @@
+extends ../../../../templates/guesthome
+
+block content
+    
+    <link rel="stylesheet" href="/styles/guestform.css">
+    <div class="container">
+    <div class="jumbotron">
+    <form class="form-horizontal" method='post' action='/guest/baptism' >
+        <fieldset>
+            input(type="hidden" name="guestid" value=`${user.int_guestid}`)
+            <legend> BAPTISM APPLICATION FORM </legend>
+            <div class="form-group" >
+            <label for="select" class="col-lg-2 control-label">Relation:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="baptismrelationship">
+                    <option value="Parent">Parent</option>
+                    <option value="Sibling">Sibling</option>
+                    <option value="Aunt/Uncle">Aunt/Uncle</option>
+                    <option value="Cousin">Cousin</option>
+
+                    <option value="Grand Parent">Grand Parent</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Child's Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="childlastname" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="childfirstname" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="childmiddlename" class="form-control" placeholder="Middle Name">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="childbirthday" class="form-control" placeholder="Enter birthday">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Child's Birthplace</label>
+            <div class="col-lg-10">
+                <input type="string" name="childbirthplace" class="form-control" placeholder="Enter your Child's Birth Place">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Mother's Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="motherlastname" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="motherfirstname" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="mothermiddlename" class="form-control" placeholder="Middle Name">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Birthplace:</label>
+            <div class="col-lg-10">
+                <input type="string" name="motherbirthplace" class="form-control" placeholder="Enter mother's birth-place">
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Father's Name:</label>
+            <div class="col-lg-3">
+                <input type="text" name="fatherlastname" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="fatherfirstname" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" name="fathermiddlename" class="form-control" placeholder="Middle Name">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Birthplace:</label>
+            <div class="col-lg-10">
+                <input type="string" name="fatherbirthplace" class="form-control" placeholder="Enter father's birthplace">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputPlace" class="col-lg-2 control-label">Place of Marriage:</label>
+            <div class="col-lg-10">
+                <input type="string" name="placeofmarriage" class="form-control" placeholder="Enter marriage's place">
+                <label> (Please indicate the church/municipality) </label> 
+            </div>
+            </div>
+    
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Family's Address:</label>
+            <div class="col-lg-10">
+                <input type="string" name="familyaddress" class="form-control" placeholder="Enter address">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputContact" class="col-lg-2 control-label">Contact #:</label>
+            <div class="col-lg-10">
+                <input type="string" name="familycontact" class="form-control" placeholder="Enter contact number">
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Desired date:</label>
+            <div class="col-lg-10">
+                <input type="date" name="baptismdate" class="form-control" placeholder="Enter desired">
+            </div>
+            </div>
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    

@@ -1,0 +1,31 @@
+extends ../../../../templates/guesthome
+
+block content
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <div class="container">
+    <div class="jumbotron">
+
+
+    <div class="btn-group" style="width:100%">
+    <a href="/guest/calendar/annointmentevents"><button>Annointment</button></a>
+    <a href="/guest/calendar/baptismalevents"><button>Baptismal</button></a>
+    <a href="/guest/calendar/funeralmassevents"><button>Funeral Mass</button></a>
+    <a href="/guest/calendar/massweddingevents"><button>Mass Wedding</button></a>
+    <a href="/guest/calendar/privateweddingevents"><button>Private Wedding</button></a>
+    </div>
+    each event in tbl_event  
+        <div class= "calendar">  
+            <ul>
+                label="Schedule"
+                li=event.date_schedule
+                label="Event"
+                li=event.char_event
+                
+            </ul>
+            
+        </div>
+    </div>
+    </div>
+
+    

@@ -1,0 +1,273 @@
+extends ../../../../templates/guesthome
+
+block content
+    
+    <link rel="stylesheet" href="/styles/weddingform.css">
+    <div class="container">
+    <div class="jumbotron">
+    form(class="form-horizontal" method='post' action=`/guest/requests/privatewedding/${reservation.int_reservationid}/edit`)
+        <fieldset>
+            input(type="hidden" name="guestid" value=`${user.int_guestid}`)
+            <legend> BRIDE's FORM </legend>
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="bridelastname" class="form-control" value= `${reservation.varchar_lastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridefirstname" class="form-control" value= `${reservation.varchar_firstname}` )
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridemiddlename" class="form-control" value= `${reservation.varchar_middlename}`)
+                </div>
+                </div>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                input( type="date" name="bridebirthday" class="form-control")
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Address:</label>
+            <div class="col-lg-10">
+                input( type="string" name="brideaddress" class="form-control" value= `${reservation.varchar_address}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputOccupation" class="col-lg-2 control-label">Occupation:</label>
+            <div class="col-lg-10">
+                input( type="string" name="brideoccupation" class="form-control" value= `${reservation.varchar_brideoccupation}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Civil Status:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="bridestatus">
+                    <option>Single</option>
+                    <option>In a Relationship</option>
+                    <option>Engaged</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                    <option>Married</option>
+                </select>
+            </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Religion:</label>
+                <div class="col-lg-10">
+                    select( class="form-control" name="bridereligion" )
+                        <option>Catholic</option>
+                        <option>Non-Catholic</option>
+                        <option>Non-Christian</option>
+                        <option>No-Religion</option>
+                    </select>
+                </div>
+                </div>
+
+            <p>Bride's Father
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="bridefatherlastname" class="form-control" value= `${reservation.varchar_bridefatherlastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridefatherfirstname" class="form-control" value= `${reservation.varchar_bridefatherfirstname}` )
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridefathermiddlename" class="form-control" value= `${reservation.varchar_bridefathermiddlename}`)
+                </div>
+            </div>
+            <p>Bride's Mother
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input(type="text" name="bridemotherlastname" class="form-control" value= `${reservation.varchar_bridemotherlastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridemotherfirstname" class="form-control" value= `${reservation.varchar_bridemotherfirstname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="bridemothermiddlename" class="form-control" value= `${reservation.varchar_bridemothermiddlename}`)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you 5 months or above pregnant?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="pregnant">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a baptized catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="bridebaptized">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a confirmed catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="brideconfirmed">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+
+
+
+
+
+            <hr>
+            <legend> GROOM's FORM </legend>
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="groomlastname" class="form-control" value= `${reservation.varchar_groomlastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groomfirstname" class="form-control" value= `${reservation.varchar_groomfirstname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groommiddlename" class="form-control" value= `${reservation.varchar_groommiddlename}`)
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                input( type="date" name="groombirthday" class="form-control")
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Address:</label>
+            <div class="col-lg-10">
+                input( type="string" name="groomaddress" class="form-control" value= `${reservation.varchar_groomaddress}`)
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="inputOccupation" class="col-lg-2 control-label">Occupation:</label>
+            <div class="col-lg-10">
+                input( type="string" name="groomoccupation" class="form-control" value= `${reservation.varchar_groomoccupation}` )
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Civil Status:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name= "groomstatus">
+                    <option>Single</option>
+                    <option>In a Relationship</option>
+                    <option>Engaged</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                    <option>Married</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Religion:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groomreligion">
+                        <option>Catholic</option>
+                        <option>Non-Catholic</option>
+                        <option>Non-Christian</option>
+                        <option>No-Religion</option>
+                    </select>
+                </div>
+                </div>
+
+            <p>Groom's Father
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="groomfatherlastname" class="form-control" value= `${reservation.varchar_groomfatherlastname}` )
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groomfatherfirstname" class="form-control" value= `${reservation.varchar_groomfatherfirstname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groomfathermiddlename" class="form-control" value= `${reservation.varchar_groomfathermiddlename}`)
+                </div>
+            </div>
+            <p>Groom's Mother
+            <div class="form-group" >
+            <label for="inputName" class="col-lg-2 control-label">Name:</label>
+            <div class="col-lg-3">
+                input( type="text" name="groommotherlastname" class="form-control" value= `${reservation.varchar_groommotherlastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groommotherfirstname" class="form-control" value= `${reservation.varchar_groommotherfirstname}`)
+                </div>
+                <div class="col-lg-3">
+                        input( type="text" name="groommothermiddlename" class="form-control" value= `${reservation.varchar_groommothermiddlename}`)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a baptized catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groombaptized">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Are you a confirmed catholic?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="groomconfirmed">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            <p>For the couple
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Church Married?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="churchmarried">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Civil Married?:</label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="civilmarried">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                </div>
+            //- <ul class="pager">
+            //-     <li><a href="/guest/masswedding/listofsponsors">Next</a></li>
+            //- </ul>
+            <div class="form-group">
+            <label for="inputDate" class="col-lg-2 control-label">Desired date:</label>
+            <div class="col-lg-10">
+                input( type="date" name="weddingdate" class="form-control")
+            </div>
+            </div>
+
+            
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    
+    </div>

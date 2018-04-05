@@ -1,0 +1,97 @@
+extends ../../../../templates/secret.pug
+
+block content
+
+    <link rel="stylesheet" href="/styles/calendarnew.css">
+    
+    <div class="container">
+    <div class="jumbotron">
+    <div class= btn-group>
+            
+                //- <legend> LIST OF EVENTS </legend><hr>
+                <legend> ANNOINTMENT REQUESTS </legend>
+        
+                <a href='/admin/reservationrequests/annointment'><button>ANNOINTMENT</button></a>
+                <a href='/admin/reservationrequests/baptismal'><button>BAPTISMAL</button></a>
+                <a href='/admin/reservationrequests/funeralmass'><button>FUNERAL MASS</button></a>
+                <a href='/admin/reservationrequests/masswedding'><button>MASS WEDDING</button></a>
+                <a href='/admin/reservationrequests/privatewedding'><button>PRIVATE WEDDING</button></a>
+        <hr>
+        </div>
+    <form class="form-horizontal" method='post' action='reservationrequests'>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+            <th></th>
+            //- <th>DATE</th>
+            <th>RESERVATION ID</th>
+            <th>USERNAME</th>
+            <th>DATE OF EVENT</th>
+            </tr>
+        </thead>
+        <tbody>
+            each event in tbl_event
+                <tr>
+                <th></th>
+                //- td=event.date_schedule
+                td
+                    a(href=`/admin/reservationrequests/masswedding/${event.int_reservationid}`)= event.int_reservationid
+                td=event.varchar_username
+                td=event.date_schedule
+                td
+                    //- <input type="submit" value="View Details">
+                    | &nbsp; 
+                    a(href=`/admin/reservationrequests/${event.int_reservationid}/approve`): span.fa.fa-edit 
+                    | &nbsp;                  
+                    a(href=`/admin/reservationrequests/${event.int_reservationid}/remove`): span.fa.fa-remove   
+                
+                //- <td><input type="submit" value="View Details"></a></td>
+                </tr>
+    </table>
+    </form>
+    </div>
+    </div>
+    <div class="footer">
+        <p> FOLLOW US ON SOCIAL MEDIA </p>
+        <i class="fa fa-facebook fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-twitter fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-instagram fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-youtube fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-google fa-2x cust" aria-hidden="true"></i>
+        <i class="fa fa-linkedin fa-2x cust" aria-hidden="true"></i>
+        <hr size="20">
+        <f2> https://churchtogo.io </f2>
+    </div>
+//- extends ../../../../templates/secret.pug
+
+//- block content
+//-     <link rel="stylesheet" href="/styles/annointmentrequest.css">
+//-     <div class="container">
+//-         <div class="jumbotron">
+//-             <h1>
+//-                 value= "@"
+//-                 value=`${tbl_reservation.int_reservationid}`
+//-             </h1><br><br><br><br><br>
+//-             //- <label> Name:</label><br><br>
+
+//-         </div>
+//-         </div>
+//-             <div class="form-group">
+//-                 <div class="col-lg-10 col-lg-offset-2">
+//-                     <a href='/guestwithsession/profile/editprofile'><button type="submit" class="btn btn-primary">EDIT</button></a>
+//-                 </div>
+//-             </div>
+//-         </div>        
+
+//-         <div class="footer">
+//-             <p> FOLLOW US ON SOCIAL MEDIA </p>
+//-             <i class="fa fa-facebook fa-2x cust" aria-hidden="true"></i>
+//-             <i class="fa fa-twitter fa-2x cust" aria-hidden="true"></i>
+//-             <i class="fa fa-instagram fa-2x cust" aria-hidden="true"></i>
+//-             <i class="fa fa-youtube fa-2x cust" aria-hidden="true"></i>
+//-             <i class="fa fa-pinterest fa-2x cust" aria-hidden="true"></i>
+//-             <i class="fa fa-linkedin fa-2x cust" aria-hidden="true"></i>
+//-             <hr size="20">
+//-             <f2> https://churchtogo.io </f2>
+//-         </div>
+//-         </div>

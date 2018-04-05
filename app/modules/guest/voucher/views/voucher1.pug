@@ -1,0 +1,52 @@
+extends ../../../../templates/guesthome
+
+block content
+    <link rel="stylesheet" href="/styles/voucher1.css">
+    .jumbotron
+        <h2>JS: Print</h2>
+            <div id = "printDiv">
+            <h1><center> Payment Voucher </center></h1>
+            <h5> PV No. ____________________________ </h5>
+            <table style="border: 2px solid #000; width: 99%; margin: 40px 2px 2px 2px; height: 40vh;">
+            <tr>
+            <td colspan="3" style="border: 2px solid #000; padding-left: 15px;">Amount:</td>
+            <td colspan="3" style="border: 2px solid #000; padding-left: 15px;">Date:</td>
+            </tr>
+            <tr>
+            <th colspan="6" style="border: 2px solid #000; padding-left: 15px;"><center>Method of Payment</center></th>
+            </tr>
+            <tr>
+            <td colspan="3" style="border: 2px solid #000; padding-left: 15px;">Cash:</td>
+            <td colspan="3" style="border: 2px solid #000; padding-left: 15px;">Check #:</td>
+            </tr>
+            <tr>
+            <td colspan="6" style="border: 2px solid #000; padding-left: 15px;">To:</td>
+            </tr>
+            <tr>
+            <td colspan="6" style="border: 2px solid #000; padding-left: 15px;">The Sum of:</td>
+            </tr>
+            <tr>
+            <td colspan="4" style="border: 2px solid #000; padding-left: 15px;">Being:</td>
+            <td colspan="2" style="border: 2px solid #000; padding-left: 15px;">Payee:</td>
+            </tr>
+            <tr>
+            <td colspan="2" style="border: 2px solid #000; padding-left: 15px;">Approved By:</td>
+            <td colspan="2" style="border: 2px solid #000; padding-left: 15px;">Paid By:</td>
+            <td colspan="2" style="border: 2px solid #000; padding-left: 15px;">Signature:</td>
+            </tr>
+            </table>
+            </div>
+
+        <button id="doPrint">Print Content</button>
+    
+    script.
+        document.getElementById("doPrint")
+            .addEventListener("click", function()
+            {
+                var restorepage = document.body.innerHTML;
+                var printContents = document.getElementById("printDiv").innerHTML;
+                var originalContents = document.body.innerHTML = printContents; 
+                
+                window.print();
+                
+            });

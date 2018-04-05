@@ -1,0 +1,128 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.jumbotron
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+legend
+{
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 40px;
+}
+label
+{   
+    float: left;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 15px;
+}
+.form-control
+{
+    width: 775px;
+    height: 40px;
+    border: none;
+    padding-left: 20px;
+}
+input[type="checkbox"],
+input[type="string"],
+input[type="number"],
+input[type="date"]
+{
+    text-decoration: none;
+    position: relative;
+    width: 775px;
+    height: 30px;
+    border: none;
+    padding: 20px;
+}
+input[type="text"]
+{
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding: 20px;
+}
+button[type="reset"]
+{
+    margin: 7px 3px;
+    margin-right: 71px;
+    float: right;  
+    width: 90px;
+    height: 50px;
+    border: none;
+    background-color: grey;
+    color: #000;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 15px;
+}
+button[type="submit"]
+{
+    margin: 7px 3px;
+    float: right;
+    width: 90px;
+    height: 50px;
+    border: none;
+    background-color: #4F5C81;
+    color: #fff;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 15px;
+}
+button[type="reset"]:hover,
+button[type="submit"]:hover
+{
+    background-color: #2D3344; 
+    color: #fff;
+}
+.footer
+{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.cust
+{
+    padding: 2px 2px 2px 2px;
+    position: relative;
+    display: inline-table;
+}
+hr {
+    border: none;
+    height: 4px;
+    color: #333; 
+    background-color: #333; 
+}
+ul.pager 
+{   
+    margin: 7px 3px;
+    margin-right: 71px;
+    float: right;  
+    width: 90px;
+    height: 50px;
+    border: none;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 15px;
+
+}
+ul.pager li 
+{   
+    display: inline;
+}
+ul.pager li a 
+{
+    background-color: #4F5C81;
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ul.pager li a:hover
+{
+    background-color: #fff; 
+    color: #2D3344;
+}

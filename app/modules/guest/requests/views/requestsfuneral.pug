@@ -1,0 +1,60 @@
+extends ../../../../templates/guesthome
+
+block content 
+
+    <link rel="stylesheet" href="/styles/header.css">
+    
+    
+    <div class="container">
+    
+    <div class="container">
+    <li class="dropdown" style="float: right; margin-right: 50px;margin-top: 10px; background-color: black; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style= "color: white ">EVENTS <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="/guest/requests">All events</a></li>
+        <li><a href="/guest/requests/anointing">Anointing of the sick</a></li>
+        <li><a href="/guest/requests/baptism">Baptism</a></li>
+        //- <li><a href="/guest/requests/confirmation">Confirmation</a></li>
+        <li><a href="/guest/requests/funeralmass">Funeral blessing</a></li>
+        <li><a href="/guest/requests/privatewedding">Marriage</a></li>
+            
+        </ul>
+    </li>
+    <div class="jumbotron">
+    <legend>  FUNERAL BLESSING REQUESTS</legend>
+    
+    <hr>
+    //- <form class="form-horizontal" method='post' action='requests'>
+    //- input(type="text" hidden='' name="int_guestid" value=`${user.int_guestid}`)
+    //- <div class="btn-group">
+    //- <a href="/guest/requests"><button>Back</button></a>
+
+    
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+            <th>RESERVATION ID</th>
+            <th>DESIRED DATE</th>
+            //- <th>DATE RESERVED</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            each reservations in tbl_reservation
+                <tr>
+                //- <th></th>
+                td=reservations.int_reservationid
+                td=reservations.date_schedule
+                        //- <td><input type="submit" value="Submit Requirements"></a></td>
+                td
+                
+                    a.button(class="btn btn-danger" href=`/guest/requests/anointing/${reservations.int_reservationid}/cancel` style="float:right; font-family:'KG Broken Vessels Sketch Regular'; margin-left: 3px") Cancel
+                    a.button(class="btn btn-success" href=`/guest/submittingforms/baptismrequirements/${reservations.int_reservationid}` style="float:right; font-family:'KG Broken Vessels Sketch Regular'; margin-left: 3px") Update
+                    a.button(class="btn btn-primary" href=`/guest/requests/anointing/${reservations.int_reservationid}` style="float:right; font-family:'KG Broken Vessels Sketch Regular'; margin-left: 3px") View
+                </tr>
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+    

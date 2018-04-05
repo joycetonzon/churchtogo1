@@ -1,0 +1,40 @@
+extends ../../../../templates/secret.pug
+block content
+    <link rel="stylesheet" href="/styles/back.css">
+    <div class="container">
+    <div class="jumbotron">
+    //- <div class="btn-group">
+    //- //- <a href="/admin/reservationrequests/annointment"><button>Back</button></a>
+
+    //- </div>
+    form( class="form-horizontal" method='post' action=`/admin/priestassignment/${tbl_reservation.int_reservationid}`)
+        <legend> PRIEST ASSIGNMENT </legend>
+            //- each reservation in tbl_reservation  
+            //- <div class= "calendar">  
+                
+            //- <div class="form-group" >
+            <label for="select" class="col-lg-2 control-label">Priest</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="priestlist">
+                    each reservation in reservations
+                        option( value = reservation.int_priestid)= reservation.varchar_priestlastname + ', ' + reservation.priestfirstname + ' ' + reservation.priestmiddlename + '.'
+                     
+                </select>
+            </div>
+            
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+
+
+            //- </div>
+
+
+            
+        </div>
+    <br>
+        </div>
+    </div>

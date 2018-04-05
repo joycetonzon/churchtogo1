@@ -1,0 +1,20 @@
+extends ../../../../templates/guesthome
+    
+
+block content 
+    
+    <link rel="stylesheet" href="/styles/submittingforms.css">
+
+    <div class="container">
+    <div class="jumbotron">
+        <div class="form-group">
+            <form id="uploadForm" enctype="multipart/form-data" method="post" action="baptismrequirements" >
+            <label for="birthcert">Birth Certificate</label>
+            <i class="fa fa-upload"></i><input id="birthcert" name="baptismBirtCert" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,pdf">
+                <div class="col-lg-10 col-lg-offset-2">
+                       
+                        <button type="submit" class="btn btn-primary">Upload File</button>
+                </div>
+        </div>
+    </div>
+    </div>

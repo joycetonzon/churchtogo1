@@ -1,0 +1,26 @@
+extends ../../../../templates/guesthome
+block content
+    <link rel="stylesheet" href="/styles/back.css">
+
+    <div class="container">
+    <div class="jumbotron">
+    <div class="btn-group">
+    <a href="/guest/approved" style= "color: #fff; "><button style = "border: 1px solid #212A30; height: 30px; width:100px;  background-color: #1c1c1c; font-family: "KG Broken Vessels Sketch Regular"; ">Back to approved applications</button></a>
+    </div>
+    <legend> ANOINTMENT INFORMATION </legend>
+        each reservation in tbl_reservation  
+            <div class= "calendar">  
+                <ul>
+                    label="Schedule"
+                    li=reservation.date_schedule
+                    label="Full name"
+                    li=reservation.varchar_lastname+" "+reservation.varchar_firstname+" "+reservation.varchar_middlename
+                    label="Birthday"
+                    li=reservation.date_birthday
+   
+            </ul>
+            
+        </div>
+    <br>
+        </div>
+    </div>

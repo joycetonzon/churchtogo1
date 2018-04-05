@@ -1,0 +1,41 @@
+extends ../../../../templates/secret.pug
+block content
+    <link rel="stylesheet" href="/styles/back.css">
+    <div class="container">
+    <div class="jumbotron">
+    <div class="btn-group">
+    <a href="/admin/reservationrequests/baptismal"><button>Back</button></a>
+
+    </div>
+    <legend> BAPTISMAL INFORMATION </legend>
+    each reservation in tbl_reservation  
+        <div class= "calendar">  
+            <ul>
+                label="Schedule"
+                li=reservation.date_schedule
+                label="Child's Full name"
+                li=reservation.varchar_lastname+" "+reservation.varchar_firstname+" "+reservation.varchar_middlename
+                label="Child's Birthday"
+                li=reservation.date_birthday
+                label="Child's birthplace"
+                li=reservation.varchar_childsbirthplace
+                label="Mother's Full name"
+                li=reservation.varchar_motherlastname+" "+reservation.varchar_motherfirstname+" "+reservation.varchar_mothermiddlename
+                label="Mother's birthplace"
+                li=reservation.varchar_motherbirthplace
+                label="Father's Full name"
+                li=reservation.varchar_fatherlastname+" "+reservation.varchar_fatherfirstname+" "+reservation.varchar_fathermiddlename
+                label="Father's birthplace"
+                li=reservation.varchar_fatherbirthplace
+                label="Parent's Marriage Place"
+                li=reservation.varchar_parentmarriageaddress
+                label="Contact Number"
+                li=reservation.varchar_baptismalcontact
+                
+   
+            </ul>
+            
+        </div>
+    <br>
+        </div>
+    </div>

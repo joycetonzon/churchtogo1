@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voucher</title>
+    <link rel="stylesheet" href="voucher.css">
+    <script>
+    function printContent(el){
+        var restorepage = document.body.innerHTML;
+        var printContent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printContent;
+            window.print();
+            document.body.innerHTML = restorepage;
+    }
+    </script>
+</head>
+<body>
+    
+        <div id="div1" class="container">
+            
+                <h1> Payment Voucher </h1>
+                <h5> PV No. ____________________________ </h5>
+                <table>
+                        <tr>
+                            <td colspan="3">Amount:</td>
+                            <td colspan="3">Date:</td>
+                        </tr>
+                        <tr>
+                            <th colspan="6"><center>Method of Payment</center></th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Cash:</td>
+                            <td colspan="3">Check #:</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">To:</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">The Sum of:</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Being:</td>
+                            <td colspan="2">Payee:</td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td colspan="2">Approved By:</td>
+                            <td colspan="2">Paid By:</td>
+                            <td colspan="2">Signature:</td>
+                        </tr>
+                </table>
+      	</div>
+        <button onclick="printContent('div1')">Print Content</button>
+</body>
+</html>

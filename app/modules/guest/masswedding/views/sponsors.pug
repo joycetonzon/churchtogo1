@@ -1,0 +1,30 @@
+extends ../../../../templates/mainwithsession
+
+block content
+  <link rel="stylesheet" href="/styles/baptismalwithsession.css">
+  <div class="container">
+    <div class="jumbotron">
+    form(class="form-horizontal" method="get" action=`/guestwithsession/masswedding/sponsors/${resid}/listofsponsors` )
+        <fieldset>
+            //- input(type="hidden" name="reservationid" value=`${user.int_guestid}`)
+            <legend>MASS WEDDING FORM </legend>
+            <div class="form-group" >
+            <label for="select" class="col-lg-2 control-label">How many sponsors? </label>
+            <div class="col-lg-10">
+                <select class="form-control" name="numberofsponsors">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            </div>
+
+        <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Submit</button></div>
+  </form>
+  </div>
+  </div>
+ 

@@ -1,0 +1,12 @@
+.container
+{
+    width: 400px;
+
+    background-position: center;
+    position: fixed;
+    border-radius: 5px;
+    margin-left: 35vw;
+    margin-top: 8.5vh;
+    
+    text-align: center;
+}

@@ -1,0 +1,104 @@
+header.container img
+{
+    width: 100vw;
+    height: 120%;
+    opacity: 0.6;
+}
+header.container .cloud1
+{
+    position: absolute;
+    top: 60px;
+    animation: cloudOne infinite 30s linear;
+}
+header.container .cloud2
+{
+    position: absolute;
+    top: -50px;
+    animation: cloudOne infinite 45s linear;
+}
+header.container .cloud3
+{
+    position: absolute;
+    top: 0px;
+    animation: cloudOne infinite 20s linear;
+}
+header.container .cloud4
+{
+    position: absolute;
+    top: 0px;
+    animation: cloudOne infinite 40s linear;
+}
+.banner img
+{
+    width: 100vw;
+    height: 100px;
+    opacity: 0.6;
+}
+.banner .cloud1
+{
+    position: absolute;
+    top: 60px;
+    animation: cloudOne infinite 30s linear;
+}
+.banner .cloud2
+{
+    position: absolute;
+    top: -50px;
+    animation: cloudOne infinite 45s linear;
+}
+.banner .cloud3
+{
+    position: absolute;
+    top: 0px;
+    animation: cloudOne infinite 20s linear;
+}
+.banner .cloud4
+{
+    position: absolute;
+    top: 0px;
+    animation: cloudOne infinite 40s linear;
+}
+@keyframes cloudOne
+{
+    0%
+    {
+        transform: translate(-100%);
+    }
+    100%
+    {
+        transform: translate(100%);
+    }
+}
+@keyframes cloudTwo
+{
+    0%
+    {
+        transform: translate(-100%);
+    }
+    100%
+    {
+        transform: translate(100%);
+    }
+}
+@keyframes cloudThree
+{
+    0%
+    {
+        transform: translate(-100%);
+    }
+    100%
+    {
+        transform: translate(100%);
+    }
+}
+@keyframes cloudFour
+{
+    0%
+    {
+        transform: translate(-100%);
+    }
+    100%
+    {
+        transform: translate(100%);
+    }
+}

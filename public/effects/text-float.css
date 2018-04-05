@@ -1,0 +1,39 @@
+.video-content h1
+{
+    text-align: center;
+    margin-top: 5%;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-size: 12em;
+    line-height: 1em;
+    color: #fff;
+    text-shadow: 0 1px 0 #46576b,
+                 0 2px 0 #46576b,
+                 0 3px 0 #364352,
+                 0 4px 0 #323f4d,
+                 0 30px 5px rgba(0,0,0,.1);
+    animation: animate 5s linear infinite;
+    cursor: pointer;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(5deg);
+    }
+    25%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(-5deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(5deg);
+    }
+}

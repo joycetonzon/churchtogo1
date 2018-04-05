@@ -1,0 +1,36 @@
+extends ../../../../templates/guesthome
+
+block content
+    <link rel="stylesheet" href="/styles/profile.css">
+        <div class="container">
+                <div id="gradient"></div>
+                <div id="card">
+                        <img src="/assets/pics/profile.png"/>
+                        each user in users
+                                <h2 style="padding-bottom: 15px;">
+                                        value= "@"+""+`${user.varchar_username}`
+                                </h2>
+                                <p> Full Name: 
+                                        value=`${user.varchar_lastname}`+", "+`${user.varchar_firstname}`+" "+`${user.varchar_middlename}`
+                                </p>
+                                <p> Gender: 
+                                        value=`${user.char_gender}`        
+                                </p>
+                                <p> Birthday: 
+                                        value=`${user.date_guestbirthday}`
+                                </p>
+                                <p> Contact #: 
+                                        value=`${user.varchar_guestcontactnumber}`
+                                </p>
+                                <span class="left bottom" style="margin-top: 10px; left: 30px;"> Address: 
+                                        value=`${user.varchar_guestaddress}`
+                                </span>
+                                <span class="left bottom" style="margin-top: 35px; left: 30px;">E-mail: 
+                                        value=`${user.varchar_guestemail}`
+                                </span>
+                                <span class="right bottom" style="margin-top: 25px;"><a href='/guestwithsession/profile/editprofile'><button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i></button></a></span>
+                </div>
+                </div>
+                
+                </div>
+                

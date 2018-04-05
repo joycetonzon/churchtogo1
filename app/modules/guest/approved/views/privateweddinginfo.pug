@@ -1,0 +1,70 @@
+extends ../../../../templates/guesthome
+block content
+    <link rel="stylesheet" href="/styles/back.css">
+    <div class="container">
+    <div class="jumbotron">
+    <div class="btn-group">
+    <a href="/guest/approved" style= "color: #fff; "><button style = "border: 1px solid #212A30; height: 30px; width:100px;  background-color: #1c1c1c; font-family: "KG Broken Vessels Sketch Regular"; ">Back to approved applications</button></a>
+
+    </div>
+    <legend> PRIVATE WEDDING INFORMATION </legend>
+
+    each reservation in tbl_reservation  
+        <div class= "calendar">  
+            <ul>
+                label="Desired Schedule"
+                li=reservation.date_schedule
+                label="Bride's Full name"
+                li=reservation.varchar_lastname+" "+reservation.varchar_firstname+" "+reservation.varchar_middlename
+                label="Bride's Birthday"
+                li=reservation.date_birthday
+                label="Bride's Occupation"
+                li=reservation.varchar_brideoccupation
+                label="Bride's Civil Status"
+                li=reservation.char_bridecivilstatus
+                label="Bride's Religion"
+                li=reservation.char_bridereligion
+                label="Bride's if pregnant (1=YES 0=NO)"
+                li=reservation.bool_brideifpregnant
+                label="Bride's if baptized (1=YES 0=NO)"
+                li=reservation.bool_brideifbaptized
+                label="Bride's if confirmed (1=YES 0=NO)"
+                li=reservation.bool_brideifconfirmed
+                label="Mother's Full name"
+                li=reservation.varchar_bridemotherlastname+" "+reservation.varchar_bridemotherfirstname+" "+reservation.varchar_bridemothermiddlename
+                label="Father's Full name"
+                li=reservation.varchar_bridefatherlastname+" "+reservation.varchar_bridefatherfirstname+" "+reservation.varchar_bridefathermiddlename
+
+
+                label="Groom's Full name"
+                li=reservation.varchar_lastname+" "+reservation.varchar_firstname+" "+reservation.varchar_middlename
+                label="Groom's Birthday"
+                li=reservation.date_birthday
+                label="Groom's Occupation"
+                li=reservation.varchar_groomoccupation
+                label="Groom's Civil Status"
+                li=reservation.char_groomcivilstatus
+                label="Groom's Religion"
+                li=reservation.char_groomreligion
+                label="Groom's if baptized (1=YES 0=NO)"
+                li=reservation.bool_groomifbaptized
+                label="Groom's if confirmed (1=YES 0=NO)"
+                li=reservation.bool_groomifconfirmed
+                label="Mother's Full name"
+                li=reservation.varchar_groommotherlastname+" "+reservation.varchar_groommotherfirstname+" "+reservation.varchar_groommothermiddlename
+                label="Father's Full name"
+                li=reservation.varchar_groomfatherlastname+" "+reservation.varchar_groomfatherfirstname+" "+reservation.varchar_groomfathermiddlename
+
+                
+   
+            </ul>
+            
+        </div> <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                a.button(class="btn btn-default" href=`/guest/previous/privatewedding/${reservation.int_reservationid}/edit` style="float:right; width:200px; margin-top:-10px;") Cancel Reservation
+                a.button(class="btn btn-primary" href=`/guest/previous/privatewedding/${reservation.int_reservationid}/edit` style="float:right; width:50px; margin-right:10px; margin-top:-10px;") Edit
+            </div>
+            </div>
+    <br>
+        </div>
+    </div>

@@ -1,0 +1,75 @@
+extends ../../../../templates/guesthome
+block content
+
+    <link rel="stylesheet" href="/styles/guestform.css">
+    <div class="container">
+    <div class="jumbotron">
+    form(class="form-horizontal" method='post' action=`/guest/requests/annointment/${reservation.int_reservationid}/edit`)
+        input(type="hidden" name="annointid" value=`${user.int_guestid}`)
+        <fieldset>
+            //- each reservation in reservation
+            <legend> ANOINTING OF THE SICK FORM </legend>
+            <div class="form-group" >
+            <label for="select" class="col-lg-2 control-label">Relation:</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="annointrelationship">
+                    <option value="Parent">Parent</option>
+                    <option value="Spouse">Spouse</option>
+                    <option value="Sibling">Sibling</option>
+                    <option value="Boyfriend/Girlfriend">Boyfriend/Girlfriend</option>
+                    <option value="Aunt/Uncle">Aunt/Uncle</option>
+                    <option value="Cousin">Cousin</option>
+                    <option value="Grandchild07">Grandchild</option>
+                    <option value="Neice/Nephew">Neice/Nephew</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Grand Parent">Grand Parent</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Sick's Name:</label>
+            <div class="col-lg-3">
+                input(type="text" name="annointlastname" class="form-control" value= `${reservation.varchar_lastname}`) 
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="annointfirstname" class="form-control" value=`${reservation.varchar_firstname}`)
+            </div>
+            <div class="col-lg-3">
+                input( type="text" name="annointmiddlename" class="form-control" value=`${reservation.varchar_middlename}`)
+            </div>
+            </div>
+
+
+            <div class="form-group">
+            <label for="inputAddress" class="col-lg-2 control-label">Address</label>
+            <div class="col-lg-10">
+                input( type="string" name="annointaddress" class="form-control" value=`${reservation.varchar_address}` )
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputBirthday" class="col-lg-2 control-label">Birth-date:</label>
+            <div class="col-lg-10">
+                input(type="date" name="annointbirthday" class="form-control" value=`${reservation.date_birthday}`)
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Desired date:</label>
+            <div class="col-lg-10">
+                input( type="date" name="annointdate" class="form-control" value=`${reservation.date_schedule}`)
+            </div>
+            </div>    
+            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    
+    </div>

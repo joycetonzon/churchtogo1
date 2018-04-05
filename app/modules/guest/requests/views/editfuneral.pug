@@ -1,0 +1,72 @@
+extends ../../../../templates/guesthome
+
+block content
+        <link rel="stylesheet" href="/styles/funeral.css">
+        <div class="container">
+        <div class="jumbotron">
+        form( class="form-horizontal" method='post' action=`/guest/requests/funeralmass/${reservation.int_reservationid}/edit`)
+                
+                <fieldset>
+                <legend> FUNERAL BLESSING REQUEST FORM </legend>
+                
+                input(type="hidden" name="deadid" value=`${user.int_guestid}`)
+                <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Relation:</label>
+                <div class="col-lg-10">
+                        <select class="form-control" name="relation">
+                        <option value="01">Parent</option>
+                        <option value="02">Spouse</option>
+                        <option value="03">Sibling</option>
+                        <option value="04">Boyfriend/Girlfriend</option>
+                        <option value="05">Aunt/Uncle</option>
+                        <option value="06">Cousin</option>
+                        <option value="07">Grand Child</option>
+                        <option value="08">Neice/Nephew</option>
+                        <option value="09">Friend</option>
+                        </select>
+                
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">Deceased's Name:</label>
+                <div class="col-lg-3">
+                input( type="text" name="deadlastname" class="form-control" value= `${reservation.varchar_lastname}`)
+                </div>
+                <div class="col-lg-3">
+                        input(type="text" name="deadfirstname" class="form-control" value= `${reservation.varchar_firstname}`)
+                </div>
+                <div class="col-lg-3">
+                        input(type="text" name="deadmiddlename" class="form-control" value= `${reservation.varchar_middlename}`)
+                </div>
+                </div>
+
+                <div class="form-group">
+                <label for="inputBirth" class="col-lg-2 control-label">Birth-date:</label>
+                <div class="col-lg-10">
+                        input(type="date" name="deadbirthday" class="form-control" )
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="inputAddress" class="col-lg-2 control-label">Address:</label>
+                <div class="col-lg-10">
+                        input( type="string" name="deadaddress" class="form-control" value= `${reservation.varchar_address}`)
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="inputDate" class="col-lg-2 control-label">Date of Funeral Mass:</label>
+                <div class="col-lg-10">
+                        input(type="date" name="deaddate" class="form-control")
+                </div>
+                </div>    
+                <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                        <button type="reset" class="btn btn-default">Clear</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </div>
+                </fieldset>
+        </form>
+        </div>
+        </div>
+       
+        </div>

@@ -1,0 +1,114 @@
+.modal
+.modal-dialog
+{
+    width: 400px;
+
+    background-position: center;
+    position: fixed;
+    border-radius: 5px;
+    margin-left: 35vw;
+    margin-top: 8.5vh;
+    
+    text-align: center;
+
+}
+.modal-header
+{
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    /* box-shadow: 1px 5px 20px 10px rgba(0, 0, 0, 0.46); */
+}
+.modal-header h1
+{
+    color: #fff
+}
+img
+{
+    width: 150px;
+    height: 150px;
+  
+
+}
+input[type="text"]
+{
+    width: 250px;
+    height: 44px;  
+    margin-top: 15px;
+    background-position: center;
+    font-weight: bold;
+    font-family: "KG Broken Vessels Sketch Regular";
+    padding-left: 45px;
+    margin-left: 15%;
+}
+input[type="password"]
+{
+    width: 250px;
+    height: 44px;  
+    background-position: center;
+    font-family: "KG Broken Vessels Sketch Regular";
+    font-weight: bold;
+    padding-left: 45px;
+    margin-left: 15%;
+}
+.modal-body
+{
+    background-color: #fff;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 20px 10px rgba(0, 0, 0, 0.46); */
+}
+.modal-content
+{
+    background-color: #fff;
+}
+button[type="submit"]
+{
+    border: none;
+    width: 248.5px;
+    height: 44px;
+    color: #848484;
+    background-position: center;
+    background: #5E5E4A;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "KG Broken Vessels Sketch Regular";
+    background-color: #1c1c1c;
+}
+button[type="submit"]:hover
+{
+    color: #ffffff;
+    background: #1c1c1c;
+}
+.checkbox
+{
+    margin-left: -30px;
+}
+.glyphicon.glyphicon-log-in 
+{
+    cursor: pointer;
+}
+.glyphicon.glyphicon-user
+{
+    position: absolute;
+    background: transparent;
+    font-size: 25px;
+    margin-left: -115px;
+    margin-top: 40px;
+    padding-top: 4px;
+}
+.glyphicon.glyphicon-lock
+{
+    position: absolute;
+    background: transparent;
+    font-size: 25px;
+    margin-left: -115px;
+    margin-top: 100px;
+    padding-top: 4px;
+}
+.glyphicon.glyphicon-remove
+{
+    background-color: transparent;
+    color: #fff;
+}
+
+

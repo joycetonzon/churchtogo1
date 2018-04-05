@@ -1,0 +1,57 @@
+extends ../../../../templates/guesthome
+
+block content 
+
+    //- <link rel="stylesheet" href="/styles/calendarnew.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    
+    <div class="container">
+    <li class="dropdown" style="float: right; margin-right: 50px;margin-top: 10px; background-color: black; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; font-family: "KG Broken Vessels Sketch Regular";">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style= "color: white ">EVENTS <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="/guest/requests">All events</a></li>
+        <li><a href="/guest/requests/anointing">Anointing of the sick</a></li>
+        <li><a href="/guest/requests/baptism">Baptism</a></li>
+        //- <li><a href="/guest/requests/confirmation">Confirmation</a></li>
+        <li><a href="/guest/requests/funeralmass">Funeral blessing</a></li>
+        <li><a href="/guest/requests/privatewedding">Marriage</a></li>
+            
+        </ul>
+    </li>
+    <div class="jumbotron">
+    <legend> PENDING REQUESTS</legend>
+
+    //- <div class="btn-group" style="width:100%">
+    //- <a href="/guest/requests/annointment"><button>Annointment</button></a>
+    //- <a href="/guest/requests/baptismal"><button>Baptismal</button></a>
+    //- <a href="/guest/requests/funeralmass"><button>Funeral Mass</button></a>
+    //- <a href="/guest/requests/masswedding"><button>Mass Wedding</button></a>
+    //- <a href="/guest/requests/privatewedding"><button>Private Wedding</button></a>
+
+    //- </div>
+
+    <hr>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+            <th>RESERVATION ID</th>
+            <th>DESIRED DATE</th>
+            <th>EVENT
+            //- <th>DATE RESERVED</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            each reservations in tbl_reservation
+                <tr>
+                //- <th></th>
+                td= reservations.int_reservationid
+                td=reservations.date_schedule
+                td=reservations.char_event
+                        //- <td><input type="submit" value="Submit Requirements"></a></td>
+                
+
+        </tbody>
+    </table>
+    </div>
+    </div>

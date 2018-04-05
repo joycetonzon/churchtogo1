@@ -1,0 +1,58 @@
+extends ../../../../templates/guesthome
+
+block content
+    
+    <link rel="stylesheet" href="/styles/baptismalwithsession.css">
+    <div class="container">
+    .jumbotron
+        <form class="form-horizontal" method='get'>
+            <fieldset>
+                
+                <legend> BAPTISMAL FORM </legend>
+                <div class="form-group" >
+                <label for="select" class="col-lg-2 control-label">How many sponsors? </label>
+                <div class="col-lg-10">
+                    <select class="form-control" name="numberofsponsors">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                </div>
+
+                <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Submit</button></div>
+
+            </fieldset>
+            </form>
+            form(class="form-horizontal" method='post' action=`/guest/baptism/sponsors/${sponsors.int_reservationid}/listofsponsors` )
+                each sponsor in sponsors
+                    input(type="hidden" name="numberofsponsors" value=`${numberOfSponsors}`)
+                    input(type="hidden" name="baptismalid" value=`${sponsor.int_baptismalid}`)
+                    - var i = 0;
+                    while i < numberOfSponsors
+                        <fieldset>
+                            <div class="form-group">
+                            <label for="inputName" class="col-lg-2 control-label">Ninang's name:</label>
+                            <div class="col-lg-3">
+                                    <input type="text" name="sponsorlastname" class="form-control" placeholder="Last Name" minlength="2" maxlength="45" required>
+                            </div>
+                            <div class="col-lg-3">
+                                    <input type="text" name="sponsorfirstname" class="form-control" placeholder="First Name" minlength="2" maxlength="45" required>
+                            </div>
+                            <div class="col-lg-3">
+                                    <input type="text" name="sponsormiddlename" class="form-control" placeholder="Middle Name" minlength="2" maxlength="45">
+                            </div>
+                            </div>
+                    
+                        </fieldset>
+                        - i++;
+
+                    <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+    </div>
+    </div>

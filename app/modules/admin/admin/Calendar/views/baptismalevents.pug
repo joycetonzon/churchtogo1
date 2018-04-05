@@ -1,0 +1,34 @@
+extends ../../../../templates/secret
+
+block content
+    <link rel="stylesheet" href="/styles/calendarnew.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <div class="container">
+    <div class="jumbotron">
+
+
+    <div class="btn-group" style="width:100%">
+    <a href="/admin/calendar/baptismalevents"><button>Baptismal</button></a>
+    <a href="/admin/calendar/privateweddingevents"><button>Private Wedding</button></a>
+    <a href="/admin/calendar/massweddingevents"><button>Mass Wedding</button></a>
+    <a href="/admin/calendar/annointmentevents"><button>Annointment</button></a>
+    <a href="/admin/calendar/funeralmassevents"><button>Funeral Mass</button></a>
+    </div>
+    each event in tbl_event  
+        <div class= "calendar">  
+            <ul>
+                label="Schedule"
+                li=event.date_schedule
+                label="Event"
+                li=event.char_event   
+                label="Guest Username"
+                li=event.varchar_username
+                label="Priest Assigned"
+                li=event.varchar_priestlastname
+
+            </ul>
+            
+        </div>
+    <br>
+        </div>
+    </div>

@@ -1,0 +1,33 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "KG Broken Vessels Sketch Regular";
+}
+#video-container
+{
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+video
+{
+    min-width: 100vw;
+    min-height: 80%;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.video-content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

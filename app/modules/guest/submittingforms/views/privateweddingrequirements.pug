@@ -1,0 +1,191 @@
+extends ../../../../templates/guesthome
+
+block content 
+    
+        <link rel="stylesheet" href="/styles/submittingforms.css">
+        
+        <div class="container">
+        <div class="jumbotron">
+        <h4>Church Requirements</h4>
+            each user in privateWedding
+                <div class="form-group">
+                <form id="uploadForm" enctype="multipart/form-data" method="post" action="privateweddingrequirements" >
+
+                <label for="baptismalcert">Baptismal Certificate</label>
+                <i class="fa fa-upload"></i><input id="baptismalcert" name="PrivateWeddBaptismalCert" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                </div>
+                <div class="form-group">
+                <label for="confirmationcert">Confirmation Certificate</label>
+                <i class="fa fa-upload"></i><input id="confirmationcert" name="PrivateWeddConfirmationCert" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                </div>
+                <div class="form-group">
+                
+                <label for="birthcert">Birth Certificate</label>
+                <i class="fa fa-upload"></i><input id="birthcert" name="PrivateWeddBirthCert" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                </div>
+                <div class="form-group">
+                <label for="marriagelicense">Marriage License</label>
+                <i class="fa fa-upload"></i><input id="marriagelicense" name="PrivateWeddMarriageLicense" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                </div>
+                <div class="form-group">
+                <label for="cenomar">CENOMAR</label>
+                <i class="fa fa-upload"></i><input id="cenomar" name="PrivateWeddCENOMAR" type="file" aria-required="true" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                </div>    
+
+                - var userWedding = {pregnant: `${user.bool_brideifpregnant}`, religionBride:`${user.char_bridereligion}`, religionGroom:`${user.char_groomreligion}`, statusBride: `${user.char_bridecivilstatus}`, statusGroom: `${user.char_groomcivilstatus}`,  jobBride: `${user.varchar_brideoccupation}`,  jobGroom: `${user.varchar_groomoccupation}`, coupleStatusChurch: `${user.bool_ifchurchmarried}`, coupleStatusCivil: `${user.bool_ifcivillymarried}`}
+                #userWedding
+                    if userWedding.pregnant==0
+                        h3 Bride not Pregnant
+                    if userWedding.pregnant==1
+                        h3 Bride is Pregnant
+                        <div class="form-group">
+                        <label for="clearancechancery">Clearance From the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="clearancechancery" name="PrivateWeddClearanceChancery" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionBride == 'Non-Catholic'
+                        h3 Bride is Non-Catholic
+                        <div class="form-group">
+                        <label for="certfreedom">Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="certfreedom" name="PrivateWeddCertOfFreedomBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="permissionmixed">Permission for Mixed Marriage from the Chancery</label>
+                        <i class="fa fa-upload"></i><input id="permissionmixed" name="PrivateWeddPermissionMixedBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionGroom == 'Non-Catholic'
+                        h3 Groom is Non-Catholic
+                        <div class="form-group">
+                        <label for="certfreedom">Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="certfreedom" name="PrivateWeddCertOfFreedomGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="permissionmixed">Permission for Mixed Marriage from the Chancery</label>
+                        <i class="fa fa-upload"></i><input id="permissionmixed" name="PrivateWeddPermissionMixedGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionBride == 'Non-Christian'
+                        h3 Bride is Non-Christian
+                        <div class="form-group">
+                        <label for="certfreedom">Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="certfreedom" name="PrivateWeddCertOfFreedomBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="dispensationchancery">Dispensation from the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="dispensationchancery" name="PrivateWeddDispensationChanceryBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionGroom == 'Non-Christian'
+                        h3 Groom is Non-Christian
+                        <div class="form-group">
+                        <label for="certfreedom">Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="certfreedom" name="PrivateWeddCertOfFreedomGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="dispensationchancery">Dispensation from the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="dispensationchancery" name="PrivateWeddDispensationChanceryGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionBride == 'No-Religion'
+                        h3 Bride has No-Religion
+                        <div class="form-group">
+                        <label for="affidfreedom">Affidavit of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="affidfreedom" name="PrivateWeddAffidOfFreedomBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="dispensationchancery">Dispensation from the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="dispensationchancery" name="PrivateWeddDispensationChanceryBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.religionGroom == 'No-Religion'
+                        h3 Groom has No-Religion
+                        <div class="form-group">
+                        <label for="certfreedom">Affidavit of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="certfreedom" name="PrivateWeddAffidOfFreedomGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="dispensationchancery">Dispensation from the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="dispensationchancery" name="PrivateWeddDispensationChanceryGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.statusBride == 'Widowed'
+                        h3 Bride is Widowed
+                        <div class="form-group">
+                        <label for="prevmarb">Contract for Previous Marriage</label>
+                        <i class="fa fa-upload"></i><input id="prevmarb" name="PrivateWeddPrevMarrBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="deathcertb">Death Certificate of Late Spouse</label>
+                        <i class="fa fa-upload"></i><input id="deathcertb" name="PrivateWeddDeathCertBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.statusGroom== 'Widowed'
+                        h3 Groom is Widowed
+                        <div class="form-group">
+                        <label for="prevmarg">Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="prevmarg" name="PrivateWeddPrevMarrGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="deathcertg">Death Certificate of Late Spouse</label>
+                        <i class="fa fa-upload"></i><input id="deathcertg" name="PrivateWeddDeathCertGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.statusBride == 'Divorced'
+                        h3 Bride is Divorced
+                        <div class="form-group">
+                        <label for="decnull">Declaration of Nullity by Catholic Matrimonial Tribunal / Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="decnull" name="PrivateWeddCertOfFreedomBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="decdiv">Decree of Divorce</label>
+                        <i class="fa fa-upload"></i><input id="decdiv" name="PrivateWeddDecreeDivorceBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="cadcof">Civil Annulment Decision with Certification of Finality</label>
+                        <i class="fa fa-upload"></i><input id="cadcof" name="PrivateWeddAnnulDecBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="marrcert">Marriage Certificate to be presented to the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="marrcert" name="PrivateWeddMarrCertBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.statusGroom== 'Divorced'
+                        h3 Groom is Divorced
+                        <div class="form-group">
+                        <label for="decnull">Declaration of Nullity by Catholic Matrimonial Tribunal / Certification of Freedom to Marry</label>
+                        <i class="fa fa-upload"></i><input id="decnull" name="PrivateWeddCertOfFreedomGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="decdiv">Decree of Divorce</label>
+                        <i class="fa fa-upload"></i><input id="decdiv" name="PrivateWeddDecreeDivorceGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="cadcof">Civil Annulment Decision with Certification of Finality</label>
+                        <i class="fa fa-upload"></i><input id="cadcof" name="PrivateWeddAnnulDecGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                        <div class="form-group">
+                        <label for="marrcert">Marriage Certificate to be presented to the Chancery Office</label>
+                        <i class="fa fa-upload"></i><input id="marrcert" name="PrivateWeddMarrCertGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.jobBride== 'Military'
+                        h3 Bride is Military
+                        <div class="form-group">
+                        <label for="milclear">Military Clearance from Immediate Commanding Office</label>
+                        <i class="fa fa-upload"></i><input id="milclear" name="PrivateWeddMilClearBride" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.jobGroom== 'Military'
+                        h3 Groom is Military
+                        <div class="form-group">
+                        <label for="milclear">Military Clearance from Immediate Commanding Office</label>
+                        <i class="fa fa-upload"></i><input id="milclear" name="PrivateWeddMilClearGroom" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.coupleStatusChurch==1
+                        h3 Couple is Church Married
+                        <div class="form-group">
+                        <label for="cchcontract">Copy of Church Marriage Contract</label>
+                        <i class="fa fa-upload"></i><input id="cchcontract" name="PrivateWeddChurchContract" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                    if userWedding.coupleStatusCivil==1
+                        h3 Groom is Military
+                        <div class="form-group">
+                        <label for="ccicontract">Copy of Civil Marriage Contract</label>
+                        <i class="fa fa-upload"></i><input id="ccicontract" name="PrivateWeddCivilContract" type="file" accept="image/x-png,image/gif,image/jpeg,.pdf">
+                        </div>
+                <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Upload File</button>
+                </div>
+                </div>
+                </div>
+                </div>
+
