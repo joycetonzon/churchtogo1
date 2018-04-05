@@ -2,7 +2,7 @@ var express = require('express');
 require('dotenv').config();
 
 var app = express();
-require("./app")(app)
+require("/")(app)
 
 
 // var func = require('/app/index.js');
