@@ -2,12 +2,15 @@
 require('dotenv').config();
 
 var express = require('express');
+var winston = require('winston');
+
 
 var app = express();
 
 var func = require('./app/index.js');
- func (app);
-app.listen(app.get('port'), () => {
-    console.log(`My server is listening to PORT: ${app.get('port')}`);
-});
+func (app);
 
+var port = process.env.PORT || 3009
+app.listen(port, function() {
+    console.log("My server is listening to PORT:" + port);
+});
