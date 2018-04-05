@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 var express = require('express');
-// var winston = require('winston');
+var winston = require('winston');
 
 
 var app = express();
