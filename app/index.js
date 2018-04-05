@@ -13,7 +13,7 @@ module.exports = app => {
         if (err) throw err;
 
         modules.forEach(moduleDir => {
-            var routes = require(`./${modulesDir}/${moduleDir}/routes`);
+            var routes = require(`./${modulesDir}/${moduleDir}`);
             Object.keys(routes).forEach(route => {
                 app.use(`/${route}`, routes[route]);
             });
