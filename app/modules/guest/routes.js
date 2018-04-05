@@ -52,14 +52,14 @@ router.use('/submittingforms', require('./submittingforms/routes'));
 
 router.use('/cancelled', require('./cancelled/routes'));
 
-router.use('/about', require('./about/routes'));
-router.use('/gallery', require('./gallery/routes'));
-router.use('/calendar', require('./calendar/routes'));
-router.use('/calendar/anointingevents', require('./calendar/routes'));
-router.use('/calendar/baptismevents', require('./calendar/routes'));
-router.use('/calendar/funeralmassevents', require('./calendar/routes'));
-router.use('/calendar/privateweddingevents', require('./calendar/routes'));
-router.use('/calendar/massweddingevents', require('./calendar/routes'));
+// router.use('/about', require('./about/routes'));
+// router.use('/gallery', require('./gallery/routes'));
+// router.use('/calendar', require('./calendar/routes'));
+// router.use('/calendar/anointingevents', require('./calendar/routes'));
+// router.use('/calendar/baptismevents', require('./calendar/routes'));
+// router.use('/calendar/funeralmassevents', require('./calendar/routes'));
+// router.use('/calendar/privateweddingevents', require('./calendar/routes'));
+// router.use('/calendar/massweddingevents', require('./calendar/routes'));
 
-router.use('/voucher', require('./voucher/routes'));
+// router.use('/voucher', require('./voucher/routes'));
 exports.guest = router;
